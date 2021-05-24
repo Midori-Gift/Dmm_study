@@ -1,0 +1,95 @@
+<html>
+  <div class="books">
+    <h2>Books</h2>
+    <table>
+      <tr>
+        <th>リーダブルコード</th>
+        <th>より良いコードを書くためのシンプルで実践的なテクニック</th>
+        <div class="link-action"></div>
+          <td>show</td>
+          <td>Edit</td>
+          <td>Destroy</td>
+        </div>
+      </tr>
+
+      <tr>
+        <th>トラブル知らずのシステム設定</th>
+        <th>bシステム設計の要点を図解で説明してくれます</th>
+        <div class="link-action"></div>
+          <td>show</td>
+          <td>Edit</td>
+          <td>Destroy</td>
+        </div>
+      </tr>
+
+      <tr>
+        <th>たのしいRuby</th>
+        <th>Rubyの入門におすすめです</th>
+        <div class="link-action"></div>
+          <td>show</td>
+          <td>Edit</td>
+          <td>Destroy</td>
+        </div>
+      </tr>
+
+      <tr>
+        <th>入門Git</th>
+        <th>gitについての基本操作から内部構造まで解説してくれます</th>
+        <div class="link-action"></div>
+          <td>show</td>
+          <td>Edit</td>
+          <td>Destroy</td>
+        </div>
+      </tr>
+
+      <tr>
+        <th>アルゴリズム図鑑</th>
+        <th>アルゴリズムについてカラーイラストでしっかり解説してくれます</th>
+        <div class="link-action"></div>
+          <td>show</td>
+          <td>Edit</td>
+          <td>Destroy</td>
+        </div>
+      </tr>
+
+      <tr>
+        <th>達人プログラマー	プログラマ入門者は必読！</th>
+        <th>データベース実践入門	効率的なSQL文を教えてくれます</th>
+        <div class="link-action"></div>
+          <td>show</td>
+          <td>Edit</td>
+          <td>Destroy</td>
+        </div>
+      </tr>
+
+      <tr>
+        <th>データベース実践入門</th>
+        <th>効率的なSQL文を教えてくれます</th>
+        <div class="link-action"></div>
+          <td>show</td>
+          <td>Edit</td>
+          <td>Destroy</td>
+        </div>
+      </tr>
+
+    </table>
+  </div>
+  <body>
+  <div class="New-Book">
+    <header>
+      <h1>New Book</h1>
+    </header>
+    <%= form_with model: @book, url:'/books', local:true do |f| %>
+      <div class="title-box">
+        <p>Title</p>
+        <%= f.text_field :title %>
+      </div>
+      <div class="body-box">
+        <p>Body</p>
+      <%= f.text_area :body %>
+      </div>
+        <%= f.submit 'Create Book' %>
+      <% end %>
+    </div>
+  </body>
+</html>
